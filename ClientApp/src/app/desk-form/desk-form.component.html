@@ -1,0 +1,4 @@
+<div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="To-do title" [(ngModel)]="title" (keyup.enter)="addTodo()"/>
+    <button class="btn btn-danger" type="button" (click)="addTodo()">Add to-do</button>
+</div>

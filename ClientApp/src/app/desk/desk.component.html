@@ -1,0 +1,50 @@
+    <div class="row mb-3" *ngIf="deskService.todoList.length >= 2">
+        <div class="col-6">
+        <input type="text" class="form-control" placeholder="Filter by title" [(ngModel)]="searchingString"/>
+        </div>
+        <div class="col">
+        <button type="button" class="btn btn-danger" *ngIf="getCompletedItemsCount() >= 2" (click)="removeAnyItems()">
+            Delete all completed to-do
+        </button>  
+        </div>
+    </div>
+
+<table class="table border" *ngIf="deskService.todoList.length > 0; else emptyItem">
+    <thead class="table-dark text-center">
+        <tr>
+            <th class="col-1">&#10004;</th>
+            <th class="col">Title</th>
+            <th class="col-2">Date</th>
+            <th class="col-2">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of deskService.todoList | deskFilter:searchingString; let i = index">
+            <td class="text-center">
+                <input type="checkbox" [checked]="item.completed" (change)="onChange(item.id)"/>
+            </td>
+            <td [class.text-decoration-line-through]="item.completed" class="text-justify text-break">
+                {{item.title}}  
+            </td>
+            <td class="text-center">
+                {{item.date}}
+            </td>
+            <td class="text-center">
+                <button type="button" class="btn btn-danger btn-circle" (click)="removeItem(item.id)">
+                    &#10008;
+                </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<ng-template #emptyItem>
+    <h2 class="text-danger"> To-do list is empty </h2>
+</ng-template>
+
+<ngx-spinner bdColor = "rgb(255,255,255)" 
+    size = "medium" 
+    color = "#000000" 
+    type = "square-jelly-box" 
+>
+</ngx-spinner>
