@@ -1,4 +1,4 @@
-## ASP.NET Core + Angular to-do application
+## ASP.NET Core + MS SQL Server + Angular to-do application
 
 Работу выполнили студенты группы КТбо3-4:
 * Задорожний Е. В.
