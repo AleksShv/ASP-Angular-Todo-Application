@@ -1,0 +1,13 @@
+a {
+    color: #6c757d;
+}
+
+a.active {
+    color: #212529;;
+    font-weight: bold;
+}
+
+.nav-tabs {
+    border-bottom: none;
+}
+

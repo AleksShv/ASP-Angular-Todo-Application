@@ -1,0 +1,15 @@
+textarea.form-control {
+    height: 150px;
+    resize: none;
+}
+
+.form-check-input:checked {
+    background-color: #212529;
+    border-color: #bb2d3b;
+}
+
+.dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: #212529;
+}

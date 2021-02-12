@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "t/sCCoMb9FP7YZ7IKJIBj0ZebHs5yZp9TLkdmiUBrzEmS8vHJrkQjorNsR7wcEsJlUcUk5sNIujYkjZwt1BoPw==",
+  "success": true,
+  "projectFilePath": "P:\\Projects\\ASP-Angular-Todo-Application\\WebAPI\\WebAPI.TokenApp\\WebAPI.TokenApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\AleksSh\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\AleksSh\\.nuget\\packages\\microsoft.identitymodel.logging\\6.8.0\\microsoft.identitymodel.logging.6.8.0.nupkg.sha512",
+    "C:\\Users\\AleksSh\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.8.0\\microsoft.identitymodel.tokens.6.8.0.nupkg.sha512",
+    "C:\\Users\\AleksSh\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}

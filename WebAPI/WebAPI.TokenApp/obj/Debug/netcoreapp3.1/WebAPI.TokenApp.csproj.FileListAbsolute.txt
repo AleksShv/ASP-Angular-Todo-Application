@@ -1,0 +1,9 @@
+P:\Projects\ASP-Angular-Todo-Application\WebAPI\WebAPI.TokenApp\bin\Debug\netcoreapp3.1\WebAPI.TokenApp.deps.json
+P:\Projects\ASP-Angular-Todo-Application\WebAPI\WebAPI.TokenApp\bin\Debug\netcoreapp3.1\WebAPI.TokenApp.dll
+P:\Projects\ASP-Angular-Todo-Application\WebAPI\WebAPI.TokenApp\bin\Debug\netcoreapp3.1\WebAPI.TokenApp.pdb
+P:\Projects\ASP-Angular-Todo-Application\WebAPI\WebAPI.TokenApp\obj\Debug\netcoreapp3.1\WebAPI.TokenApp.csprojAssemblyReference.cache
+P:\Projects\ASP-Angular-Todo-Application\WebAPI\WebAPI.TokenApp\obj\Debug\netcoreapp3.1\WebAPI.TokenApp.AssemblyInfoInputs.cache
+P:\Projects\ASP-Angular-Todo-Application\WebAPI\WebAPI.TokenApp\obj\Debug\netcoreapp3.1\WebAPI.TokenApp.AssemblyInfo.cs
+P:\Projects\ASP-Angular-Todo-Application\WebAPI\WebAPI.TokenApp\obj\Debug\netcoreapp3.1\WebAPI.TokenApp.csproj.CoreCompileInputs.cache
+P:\Projects\ASP-Angular-Todo-Application\WebAPI\WebAPI.TokenApp\obj\Debug\netcoreapp3.1\WebAPI.TokenApp.dll
+P:\Projects\ASP-Angular-Todo-Application\WebAPI\WebAPI.TokenApp\obj\Debug\netcoreapp3.1\WebAPI.TokenApp.pdb

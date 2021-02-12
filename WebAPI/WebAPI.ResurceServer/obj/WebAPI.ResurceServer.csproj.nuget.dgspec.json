@@ -1,0 +1,149 @@
+{
+  "format": 1,
+  "restore": {
+    "P:\\Projects\\ASP-Angular-Todo-Application\\WebAPI\\WebAPI.ResurceServer\\WebAPI.ResurceServer.csproj": {}
+  },
+  "projects": {
+    "P:\\Projects\\ASP-Angular-Todo-Application\\WebAPI\\WebAPI.ResurceServer\\WebAPI.ResurceServer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "P:\\Projects\\ASP-Angular-Todo-Application\\WebAPI\\WebAPI.ResurceServer\\WebAPI.ResurceServer.csproj",
+        "projectName": "WebAPI.ResurceServer",
+        "projectPath": "P:\\Projects\\ASP-Angular-Todo-Application\\WebAPI\\WebAPI.ResurceServer\\WebAPI.ResurceServer.csproj",
+        "packagesPath": "C:\\Users\\AleksSh\\.nuget\\packages\\",
+        "outputPath": "P:\\Projects\\ASP-Angular-Todo-Application\\WebAPI\\WebAPI.ResurceServer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\AleksSh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "P:\\Projects\\ASP-Angular-Todo-Application\\WebAPI\\WebAPI.TokenApp\\WebAPI.TokenApp.csproj": {
+                "projectPath": "P:\\Projects\\ASP-Angular-Todo-Application\\WebAPI\\WebAPI.TokenApp\\WebAPI.TokenApp.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.10, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "P:\\Projects\\ASP-Angular-Todo-Application\\WebAPI\\WebAPI.TokenApp\\WebAPI.TokenApp.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "P:\\Projects\\ASP-Angular-Todo-Application\\WebAPI\\WebAPI.TokenApp\\WebAPI.TokenApp.csproj",
+        "projectName": "WebAPI.TokenApp",
+        "projectPath": "P:\\Projects\\ASP-Angular-Todo-Application\\WebAPI\\WebAPI.TokenApp\\WebAPI.TokenApp.csproj",
+        "packagesPath": "C:\\Users\\AleksSh\\.nuget\\packages\\",
+        "outputPath": "P:\\Projects\\ASP-Angular-Todo-Application\\WebAPI\\WebAPI.TokenApp\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\AleksSh\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.8.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

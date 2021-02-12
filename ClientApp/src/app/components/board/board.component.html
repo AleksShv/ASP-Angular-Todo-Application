@@ -1,0 +1,58 @@
+<div class="row p-3" style="height: 93%;">
+    <div class="col-5">
+        <app-board-form [(filter)]="filter" (filterTypeChange)="onFilterTypeChange($event)"></app-board-form>
+    </div>
+
+    <div class="col scroll" *ngIf="getLength() > 0; else: emptyItem">
+        <div *ngFor="let item of getNotes() | boardFilter:filter:filterType ; let i = index" 
+            class="p-3 pt-1 mb-2 border rounded-3 shadow-sm"
+            [class.border-2]="item.completed" [class.border-success]="item.completed">
+            
+            <!-- Title and tool panel -->
+            <div class="row mb-2 bg-dark">
+                <div class="col text-white"> 
+                    <h3 class="m-0 mt-2 mb-2">{{item.title}}</h3> 
+                </div>
+                
+                <!-- Tools -->
+                <div class="col-auto p-2" [hidden]="i == changeItem">
+                    <button class="btn btn-light btn-circle me-2" [hidden]="item.completed" (click)="completeItem(item.id)">
+                        <i class="bi bi-clipboard-check"></i>
+                    </button>
+                    <button class="btn btn-light btn-circle me-2" [hidden]="item.completed" (click)="editItem(i, true)">
+                        <i class="bi bi-pencil-square"></i>
+                    </button>
+                    <button class="btn btn-light btn-circle" (click)="removeItem(item.id)"> 
+                        <i class="bi bi-clipboard-x"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="text-break content">
+                <p>{{item.content}}</p>
+            </div>
+
+            <!-- Info -->
+            <hr/>
+            <div class="mb-1">
+                <small>Created: {{item.createDate | date:"short"}}.</small>
+                <br>
+            </div>
+
+            <div clas="alert alert-success mb-1" [hidden]="!item.changed">
+                <small>Changed</small>
+            </div>
+                   
+            <div class="alert alert-success m-0 p-1" [hidden]="!item.completed">
+                <small>Completed: {{item.completeDate | date:"short"}}.</small> <br>
+            </div>
+        </div>
+    </div>
+
+    <ng-template #emptyItem>
+        <div class="col">
+            <h2 class="text-danger text-center"> To-do list is empty </h2>
+        </div>
+    </ng-template>
+</div>

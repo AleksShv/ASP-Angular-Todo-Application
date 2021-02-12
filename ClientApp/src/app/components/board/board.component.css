@@ -1,0 +1,27 @@
+.btn-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    font-size: 1.5em;
+    padding: 0;
+    line-height: 0;
+}
+
+.scroll {
+    overflow: auto;
+    max-height: 100%;
+}
+
+img {
+    height: 20px;
+}
+
+.content {
+    text-align: justify;
+    text-indent: 25px;
+}
+
+textarea.form-control {
+    resize: none;
+    overflow: hidden;
+}

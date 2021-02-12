@@ -1,0 +1,72 @@
+<!-- TO-DO CREATED FORM -->
+<form novalidate class="form-group" [formGroup]="createItemForm" (ngSubmit)="addNote()">
+    <input type="text" class="form-control" placeholder="To-do title" name="title" formControlName="title" autocomplete="off"
+        [class.is-invalid]="createItemForm.get('title').invalid && createItemForm.get('title').touched"> 
+
+    <textarea class="form-control mt-2" placeholder="To-do content" name="content" formControlName="content"
+        [class.is-invalid]="createItemForm.get('content').invalid && createItemForm.get('content').touched">
+    </textarea>
+
+    <div class="d-grid">
+        <button class="btn btn-danger mt-2" [disabled]="createItemForm.invalid">
+            Add to-do
+        </button>
+    </div>
+</form>
+<hr/>
+
+<!-- OPTIONS -->
+<div class="row mb-3 p-2" *ngIf="getLength() >= 2">
+
+    <!-- Filter -->
+    <div class="input-group mb-2">
+        <input type="text" class="form-control" placeholder="Filter by" [ngModel]="filter" (ngModelChange)="onFilterChange($event)"/>
+
+        <div class="dropend"> 
+            <button class="btn btn-light dropdown-toggle border" type="button" id="filter" data-bs-toggle="dropdown" aria-expanded="false">
+                {{filterType[0].toUpperCase() + filterType.substring(1)}}
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="filter">
+                <li><button class="dropdown-item" type="button" (click)="filterByTitle(); onFilterTypeChange(filterType)">Title</button></li>
+                <li><button class="dropdown-item" type="button" (click)="filterByContent(); onFilterTypeChange(filterType)">Content</button></li>
+              </ul>
+        </div>
+    </div>
+
+    <!-- Sorter -->
+    <div class="dropend d-grid mb-2">
+        <button class="btn btn-light dropdown-toggle border" type="button" id="sorter" data-bs-toggle="dropdown" aria-expanded="false">
+            Sort by {{sortingType}}
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="sorter">
+            <li><button class="dropdown-item" type="button" (click)="sortById()" >Order</button></li>
+            <li><button class="dropdown-item" type="button" (click)="sortByTitle()" >Title</button></li>
+            <li><button class="dropdown-item" type="button" (click)="sortByContent()">Content</button></li>
+            <li><button class="dropdown-item" type="button" (click)="sortByDate()">Date</button></li>
+            <li><button class="dropdown-item" type="button" (click)="sortByCompleted()">Completed</button></li>
+            <li><hr class="dropdown-divider"></li>
+            <li>
+                <div class="form-check m-1">
+                    <input class="form-check-input " type="radio" name="flexRadioDefault" id="forward" checked (change)="setOrder(1)">
+                    <label class="form-check-label" for="forward">
+                        Forvard order
+                    </label>
+                </div>
+
+                <div class="form-check m-1">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="reverse" (change)="setOrder(-1)">
+                    <label class="form-check-label" for="reverse">
+                        Reverse order
+                    </label>
+                </div>
+              </li>
+        </ul>
+    </div>
+    
+    <!-- Delete Completed -->
+    <div class="d-grid mb-2">
+    <button type="button" class="btn btn-danger" *ngIf="getCompletedItemsCount() >= 2" (click)="removeAnyItems()">
+        Delete all completed to-do
+    </button>
+    </div>
+</div>

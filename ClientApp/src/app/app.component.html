@@ -1,7 +1,27 @@
-<div class="container-lg row-2 mt-3">
-    <h1 class="text-center fw-bold">ASP.NET Core + Angular to-do application</h1>
-    <div class="col-12 border p-3 mt-3">
-        <app-desk-form></app-desk-form>
-        <app-desk></app-desk>
-    </div>
-</div>     
+<div class="container h-100 bg-white border border-2 border-dark"> 
+        <header class="row px-3 bg-dark text-white align-items-center" style="height: 7%;">
+                <div class="col">
+                        <h1 class="fw-bold m-0">To-Do List</h1>
+                </div>
+                
+                <div class="col-auto dropdawn" *ngIf="isLoggedIn()">
+                        <div class="user" id="account" data-bs-toggle="dropdown" aria-expanded="false">
+                                <p class="d-inline me-2">{{getUserName()}}</p>
+                                <i class="d-inline bi bi-person-circle fs-3"></i>
+                        </div>
+                        <ul class="dropdown-menu" aria-labelledby="account">
+                                <li><button class="dropdown-item" (click)="Logout()">Logout</button></li>
+                                <li><button class="dropdown-item">Delete account</button></li>
+                        </ul>
+                </div>
+        </header>
+        
+        <router-outlet></router-outlet>         
+
+        <ngx-spinner bdColor = "rgb(255,255,255)" 
+                size = "medium" 
+                color = "#000000" 
+                type = "square-jelly-box" 
+                >
+        </ngx-spinner>      
+</div>
